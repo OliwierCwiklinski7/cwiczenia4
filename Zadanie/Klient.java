@@ -8,7 +8,7 @@ public class Klient {
     private String email;
     private ArrayList<Wydarzenie> listaRezerwacji = new ArrayList<>();
 
-    public Klient(String imię, String nazwisko) {
+    public Klient(String imie, String nazwisko) {
         this.imie = imie;
         this.nazwisko = nazwisko;
     }

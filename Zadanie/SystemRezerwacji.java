@@ -7,26 +7,30 @@ public class SystemRezerwacji {
     private ArrayList<Klient> klienci = new ArrayList<>();
 
 
-    public void dodajWydarzenie(Wydarzenie wydarzenie) {
-        wydarzenia.add(wydarzenie);
+    public void dodajWydarzenie(Wydarzenie w) {
+        wydarzenia.add(w);
     }
 
-    public void dodajWydarzenie(String nazwa, double cena) {
-        wydarzenia.add(new Wydarzenie(nazwa, cena));
+    public void dodajWydarzenie(String nazwa, double cena, String data, String miejsce) {
+        Wydarzenie w = new Wydarzenie(nazwa, cena, data, miejsce);
+        wydarzenia.add(w);
     }
 
-    public void dodajKlienta(Klient klient) {
-        klienci.add(klient);
+    public void dodajKlienta(Klient k) {
+        klienci.add(k);
     }
 
-    public void dodajKlienta(String imię, String nazwisko, String email) {
-        klienci.add(new Klient(imię, nazwisko, email));
+    public void dodajklienta(String imie, String nazwisko, String email) {
+        Klient k = new Klient(imie, nazwisko, email);
+        klienci.add(k);
     }
+
 
     public void dokonajRezerwacji(Klient klient, Wydarzenie wydarzenie) {
         klient.dodajRezerwacje(wydarzenie);
         wydarzenie.ZarezerwujMiejsce();
     }
+
 
     public Wydarzenie znajdzWydarzenie(String nazwa) {
         for (Wydarzenie w : wydarzenia) {

@@ -1,7 +1,7 @@
 package Zadanie;
 
 public class Wydarzenie {
-    private String nazwa;
+    private String  nazwa;
     private String data;
     private String miejsce;
     private int maxLiczbaMiejsc = 100;
@@ -73,19 +73,13 @@ public class Wydarzenie {
 
     public String toString() {
         return "Wydarzenie: " + nazwa + "\n" +
-                "Data: " + data + "\n" +
+                "Data: " + getData() + "\n" +
                 "Miejsce: " + miejsce + "\n" +
                 "Cena: " + cena + " PLN\n" +
                 "Dostępne miejsca: " + dostepneMiejsca + "/" + maxLiczbaMiejsc;
     }
 
     public void ZarezerwujMiejsce() {
-        if (dostepneMiejsca < maxLiczbaMiejsc) {
-            dostepneMiejsca++;
-            System.out.println("Miejsca zostały zarezerwowne :)");
-        } else {
-            System.out.println("Brak dostepnych miejsc!!");
-
-        }
+        dostepneMiejsca++;
     }
 }
